@@ -1,0 +1,95 @@
+///////////////////////////////////////
+/// INVOICE HELPER CLASS
+a {
+  display: block;
+}
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: 1px;
+  box-shadow: $-border-btn-in;
+  line-height: 2rem;
+}
+.w-10 {
+  width: 10%;
+}
+.w-15 {
+  width: 15%;
+}
+
+.w-45 {
+  width: 45%;
+}
+
+.w-50 {
+  width: 50%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-25rem {
+  width: 25rem;
+}
+.w-100 {
+  width: 100% !important;
+}
+.left-text {
+  text-align: left;
+}
+.center-text {
+  text-align: center;
+}
+.right-text {
+  text-align: right;
+}
+.box-shadow {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+///////////////////////////////////////
+/// FONT FAMILY
+.font-family {
+  font-family: "Redressed", cursive;
+}
+
+/////////////////////////////////////////
+/// Javascript helper classes
+.accordion {
+  cursor: pointer;
+}
+.row-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0.6rem 0;
+  gap: 1rem;
+}
+.image-div {
+  height: 100%;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.helper-flex {
+  display: flex;
+  gap: 0.5rem;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.delete-task {
+  height: 3rem;
+  width: 3rem;
+  fill: $-color-secondary;
+  cursor: pointer;
+  z-index: 3000;
+}
+.selectel {
+  @extend %selectel;
+}
+
+.dragging {
+  cursor: grab;
+}

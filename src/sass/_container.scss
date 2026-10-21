@@ -1,0 +1,29 @@
+body {
+  font-family: $-font-primary;
+
+  background-image: linear-gradient(
+    to right bottom,
+    $-secondary-opa,
+    rgba($-color-secondary, 0.4)
+  );
+  font-size: 1.6rem;
+  font-family: $-font-display;
+  color: $-color-txt;
+  line-height: 1.2;
+}
+
+/////////////////////////////////////////
+// containers for admin pages
+.ad-container-x-large {
+  background-image: linear-gradient(
+    $-color-secondary-dark 50%,
+    $-color-secondary
+  );
+  min-height: 100vh;
+}
+.ad-container-large {
+  width: 100%;
+}
+
+/////////////////////////////////////////
+// containers for admin pages

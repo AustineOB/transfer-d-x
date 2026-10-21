@@ -1,0 +1,84 @@
+@mixin respond($-breakpoint) {
+  @if $-breakpoint == phone-port {
+    @media (max-width: 37.875em) {
+      //606px
+      @content;
+    }
+  }
+  @if $-breakpoint == phone-land {
+    @media (max-width: 46.875em) {
+      //750px
+      @content;
+    }
+  }
+  @if $-breakpoint == tab-port {
+    @media (max-width: 58.75em) {
+      // 940px
+      @content;
+    }
+  }
+  @if $-breakpoint == tab-land {
+    @media (max-width: 65.9375em) {
+      //1200px
+      @content;
+    }
+  }
+}
+
+/* @keyframes moveInRight {
+  0% {
+    transform: translateX(50rem);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateX(40rem);
+  }
+  40% {
+    transform: translateX(30rem);
+  }
+  60% {
+    transform: translateX(20rem);
+  }
+  80% {
+    transform: translateX(10rem);
+  }
+  90% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+*/
+@keyframes moveInRight {
+  0% {
+    transform: translateX(40rem);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes moveOutRight {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(-1rem);
+  }
+
+  0% {
+    transform: translateX(50rem);
+    opacity: 0;
+  }
+}

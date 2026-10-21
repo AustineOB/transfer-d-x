@@ -1,0 +1,76 @@
+.hidden {
+  display: none;
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.active {
+  & svg {
+    fill: $-color-gray-dark-3;
+  }
+}
+
+/////////////////////////////////////////
+// To open price bar when admin is editing product
+
+.add-product__sidebar--option-price.option-price-active {
+  & + a {
+    & p:last-of-type {
+      transform: rotate(180deg);
+      color: green;
+    }
+  }
+}
+
+.expand-btn {
+  padding: 2rem;
+  align-items: center;
+}
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 1rem;
+  border-top: $-line-1;
+
+  // height: 9.25rem;
+  transition:
+    all 0.3s,
+    opacity 0.1s;
+}
+
+.accordion-container.accordion-collaps {
+  padding: 0px !important;
+  transform: translateY(30px);
+  height: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  opacity: 0;
+
+  // & ~ * {
+  //   display: none;
+  // }
+}
+
+// // 6 because the li is 6 in number
+// // this shoOOuld be at the element
+// @for $i from through 6
+// $:nth-child(#{$i})
+// animation::after
+// name:menu1
+// duration:300ms
+// delay:(150ms * $i) - 300
+// timing-function:ease-in-out
+// fill-mode:forwards
+
+// @keyframes menu1 {
+//   0%
+//   opacity: 0;
+//   transform:rotateY(-90deg) translate(30px)
+
+//   100%
+//   opacity:1
+//   transform:rotate(0deg) translate(0px)
+// }

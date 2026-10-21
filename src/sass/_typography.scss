@@ -1,0 +1,125 @@
+.heading-1 {
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-transform: capitalize;
+  padding: 1rem 0;
+  background-image: linear-gradient(
+    rgba($-color-primary-dark, 0.9),
+    rgba($-color-primary-dark, 0.9)
+  );
+  font-family: $-font-primary;
+  background-clip: text;
+  color: transparent;
+  font-style: italic;
+  z-index: 10;
+
+  @include respond(phone-port) {
+    left: -15rem;
+  }
+}
+
+.item {
+  &__logo-content {
+    height: 7rem;
+    width: 15rem;
+  }
+
+  &__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+  }
+}
+
+.thumbnail {
+  position: relative;
+  grid-row: 3 /5;
+  grid-column: 8 / 11;
+  z-index: 3;
+
+  &__img {
+    width: 100%;
+  }
+
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: $-font-primary;
+    font-size: 2rem;
+    font-style: oblique;
+    color: $-color-secondary-dark;
+    text-transform: uppercase;
+  }
+}
+
+//////////////////////////////////////
+/// ITEM PRICE AND QUANTITY
+%item-value {
+  font-size: 2rem;
+  border: 1px solid $-color-primary;
+  border-radius: 10px;
+  position: absolute;
+  background-color: $-color-white;
+  top: 4rem;
+}
+.item {
+  &-price {
+    @extend %item-value;
+    padding: 0.5rem;
+    &--position {
+      left: 0;
+    }
+  }
+  &-quantity {
+    padding: 1rem;
+    @extend %item-value;
+    &--position {
+      right: 0;
+    }
+  }
+}
+
+%selectel {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid $-color-gray-light-4;
+  font-size: 2rem;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  min-width: 11rem;
+  color: inherit;
+
+  & option {
+    border: none;
+    background-color: $-color-gray-dark-1;
+
+    color: #fff;
+
+    &:nth-child(odd) {
+      background-color: $-color-secondary-dark;
+    }
+  }
+}
+
+%responsive-btn {
+  padding: 1.5rem 3rem;
+  transition: all 0.2s;
+  letter-spacing: 3px;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}

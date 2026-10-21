@@ -1,0 +1,65 @@
+///////////////////////////////////////////////
+/// Shop UI featutres of the display item
+.features {
+  // background-color: #865f;
+  grid-column: col-start 4 / col-end 6;
+
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tab-port) {
+    grid-column: full-start / full-end;
+    grid-row: 5 / 6;
+  }
+}
+
+.item {
+  &__feature {
+    margin-bottom: 5rem;
+
+    @include respond(tab-port) {
+      margin: 0;
+    }
+  }
+  &__feature-content {
+    height: 35rem;
+
+    overflow: auto;
+    // FIXME
+    // scrollbar-width: none;
+    // background-color: $-color-gray-light-1;
+
+    @include respond(tab-port) {
+      height: auto;
+    }
+  }
+
+  &__feature-heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $-font-primary;
+    letter-spacing: 8px;
+  }
+
+  &__feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__feature-item {
+    display: flex;
+    gap: 2px;
+  }
+
+  &__feature-icon {
+    height: 2rem;
+    width: 6rem;
+    fill: $-color-secondary;
+  }
+
+  &__feature-text {
+    // font-size: 1.7rem;
+    line-height: 1.6;
+  }
+}

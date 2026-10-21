@@ -1,0 +1,153 @@
+%invoicel {
+  // background-image: url(../img/nigeria.jpg);
+  background-image:
+    linear-gradient(rgba($-color-white, 0.5), rgba($-color-white, 0.5)),
+    url(../img/wallpaper-4.jpg);
+  color: $-color-txt-dark;
+  background-size: cover;
+  background-position: top;
+  // opacity: 0.;
+}
+.invoice-section {
+  grid-column: full-start / col-start 4;
+  padding: 5px;
+  margin-bottom: 3rem;
+
+  @include respond(tab-port) {
+    grid-column: full-start / col-start 6;
+    background-color: $-color-gray-light-2;
+  }
+
+  @include respond(phone-land) {
+    padding: 1px;
+  }
+
+  @include respond(phone-port) {
+    display: none;
+  }
+}
+
+.invoice {
+  //EXTEND STYLE
+  @extend %invoicel;
+
+  &__head {
+    margin-bottom: 1rem;
+  }
+
+  &__heading {
+    padding: 1rem 0.8rem;
+    // background-image: linear-gradient($-color-primary-dark, rgba(0, 0, 0, 0.6));
+    background-color: $-color-primary-dark;
+
+    border-radius: 4px;
+    color: $-color-gray-light-1;
+    text-transform: uppercase;
+  }
+
+  &__row {
+    display: flex;
+    &-content {
+      display: flex;
+      width: 95%;
+    }
+  }
+
+  &__col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__body {
+    /* 
+For small screen
+    max-height: 350px;
+     */
+    max-height: 430px;
+    cursor: grab;
+    width: 100%;
+
+    overflow: auto;
+    scrollbar-width: none;
+  }
+  &__body-row {
+    padding: 0.8rem 0;
+
+    border: 1px solid $-color-gray-dark-1;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgba($-color-gray-light-2, 0.6);
+  }
+
+  &__list--description {
+    justify-self: flex-start;
+  }
+
+  &__foot-row {
+    display: flex;
+    justify-content: space-between;
+    background-color: $-color-primary;
+    align-items: center;
+    padding: 2px 2rem 3px 0;
+    color: $-color-milk-white;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  //FOR THE DELET AND UDO INVOCE ACTIONS
+  /* 
+  In other to remove it take out 
+  [invoice__row-content and invoice-icon-box and edith the width percentage of the row to 100%]
+  
+  */
+
+  &__icon-box {
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $-color-white;
+    align-items: center;
+    border-radius: 4px;
+    gap: 1rem;
+  }
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $-color-gray-dark-2;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  &__quantity-toggle {
+    height: 3rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+
+    background-color: $-color-white;
+    border: 1px solid $-color-primary;
+    border-radius: 4px;
+  }
+
+  &__icon-sort-box {
+    display: flex;
+    flex-direction: column;
+    background-color: $-color-white;
+    padding: 0.4rem;
+    border-radius: 4px;
+    align-items: center;
+    cursor: pointer;
+    & p {
+      color: $-color-txt-dark;
+      font-weight: 700;
+    }
+  }
+
+  &__icon-sort {
+    height: 2rem;
+    width: 2rem;
+    fill: $-color-gray-dark-2;
+  }
+}

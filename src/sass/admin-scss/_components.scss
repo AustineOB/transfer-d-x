@@ -1,0 +1,240 @@
+// .dock-section-form{
+
+// }
+
+.dock-form {
+  background-color: $-color-white;
+  display: flex;
+  &__form-content {
+    padding: 3rem 0;
+    background-color: $-color-primary;
+  }
+  &__form {
+    background-color: $-color-white;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 2rem;
+    justify-content: space-between;
+  }
+  &__input {
+    padding: 2rem;
+    box-shadow: $-border-btn-out;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    color: inherit;
+
+    &:focus {
+      outline: 2px solid $-color-primary;
+      box-shadow: $-border-btn-in;
+      transition: all 0.2s ease;
+      letter-spacing: 1px;
+      color: $-color-txt-dark;
+    }
+    &::-webkit-input-placeholder {
+      color: $-color-gray-dark-1;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__form-group-user {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__input-user {
+    padding: 5rem 1rem;
+    border-radius: 30px;
+  }
+
+  &__input-description {
+    padding: 4rem;
+    border-radius: 16px;
+  }
+
+  /////////////////////////
+  /// RIGHT
+  &__section-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: $-border-btn-out;
+    border-radius: 16px;
+    background-color: $-color-tylon;
+  }
+
+  &__label-section {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+
+  &__input-section {
+    border: none;
+    padding: 2rem;
+    transition: all 0.2s ease;
+
+    &:focus {
+      outline: 2px solid $-color-primary;
+      box-shadow: $-border-btn-in;
+    }
+
+    &::-webkit-input-placeholder {
+      letter-spacing: 3rem;
+    }
+  }
+
+  &__input-quantity {
+    border-radius: 100px;
+    box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  &__input-item-name {
+    border-radius: 100px;
+  }
+
+  &__box-group {
+    flex: 0 70%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: $-border-btn-out;
+    padding: 2rem;
+    border-radius: 16px;
+  }
+
+  &__date-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  &__date {
+    font-size: 2rem;
+    padding: 2rem;
+    box-shadow: inset 1px 1px 2px 3px $-color-border;
+    letter-spacing: 2px;
+    border-radius: 20px 0 20px;
+  }
+
+  &__date-format {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__flag-content {
+    padding: 3rem 0;
+    background-color: $-color-white;
+    width: 100%;
+    display: flex;
+  }
+
+  &__right-content {
+    align-self: stretch;
+    background-color: $-color-primary;
+    width: 100%;
+    color: $-color-gray-light-2;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__warning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__heading {
+    letter-spacing: 2px;
+  }
+
+  &__button {
+    padding: 1.5rem 3rem;
+    width: 80%;
+    border-radius: 100px;
+    border: none;
+    box-shadow: $-border-btn-out;
+    color: $-color-txt-dark;
+  }
+}
+
+.slider {
+  height: 100%;
+  position: relative;
+
+  overflow: hidden;
+  &__sliders {
+    height: 100%;
+    position: absolute;
+    // transition: all 0.1s;
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+
+  &__user-detail {
+    position: absolute;
+    // z-index: 10;
+    top: 2rem;
+    left: 2rem;
+  }
+  &__user {
+    color: $-color-white;
+    font-size: 4rem;
+  }
+  &__title {
+    color: $-color-white;
+    letter-spacing: 2px;
+  }
+
+  &__label {
+    position: absolute;
+    font-size: 2rem;
+    left: 2.5rem;
+    bottom: 2rem;
+    color: $-color-gray-dark-5;
+    letter-spacing: 1px;
+    color: greenyellow;
+    display: inline-block;
+    // z-index: 10;
+  }
+
+  &__btn {
+    position: absolute;
+    z-index: 10;
+    background-color: $-color-white;
+    padding: 2rem;
+    font-size: 3rem;
+    border: none;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+
+    transform: translate(-0%, -50%);
+    cursor: pointer;
+    &-next {
+      right: 0%;
+      top: 50%;
+    }
+    &-prev {
+      left: 0;
+      top: 50%;
+    }
+  }
+}

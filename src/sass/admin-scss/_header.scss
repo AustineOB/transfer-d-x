@@ -1,0 +1,247 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $-color-secondary-dark;
+  padding: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 6rem;
+  //   width: 100%;
+
+  &__header {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    background-image:
+      linear-gradient(
+        to right,
+        rgba($-color-secondary-dark, 0.95) 40%,
+        transparent 50%,
+        $-color-secondary-dark
+      ),
+      url(../../src/img/profile.jpg);
+    background-position: top;
+    height: 90vh;
+  }
+
+  &__content-section {
+    max-width: 180rem;
+    margin: 0 auto;
+  }
+
+  &__header-navbar-top {
+    margin-bottom: 6rem;
+    &--list {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      text-transform: uppercase;
+    }
+
+    &--link:link,
+    &--link:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: $-color-beige;
+      padding: 0 1.5rem;
+    }
+  }
+
+  &__header-text {
+    color: #fff;
+
+    display: grid;
+
+    grid-template-columns: minmax(min-content, max-content);
+    grid-template-rows: 1fr repeat(2, min-content) 2fr;
+    gap: 3rem;
+    & h1 {
+      letter-spacing: 5px;
+    }
+
+    & h2 {
+      font-family: $-font-secondary;
+      text-transform: capitalize;
+      font-size: 3rem;
+    }
+
+    & h3 {
+      line-height: 5.5rem;
+      letter-spacing: 4px;
+      font-size: 4rem;
+      font-weight: 300;
+    }
+    &--design {
+      width: 80%;
+      height: 10rem;
+      border: 2px solid $-color-milk-white;
+      box-shadow: 1px 1px 5px 9px rgba(0, 0, 0, 0.5);
+    }
+
+    &--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &--daily-quote {
+      justify-self: center;
+    }
+  }
+
+  &__header-btn-wrapper {
+    justify-content: space-evenly;
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 0;
+    color: $-color-gray-dark-5;
+    font-size: 2rem;
+    letter-spacing: 2px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #fff6c11a;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.055), transparent);
+  }
+
+  &__header-btn {
+  }
+
+  &__header-btn-link:link,
+  &__header-btn-link:visited {
+    padding: 1.5rem 3rem;
+    background-color: #fff;
+  }
+  &__header-btn-link--secondary:link,
+  &__header-btn-link--secondary:visited {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  &__header-btn-link:hover {
+    background-color: rgba(255 255 255 / 90%);
+    transform: translateY(-1px);
+  }
+  &__header-btn-link--secondary:hover {
+    // border-color: rgba(255, 255, 255, 0.45); /* Brighter glass edge */
+    background: rgba(255, 255, 255, 0.1); /* Subtle sheen on hover */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  }
+  &__header-btn-link:active {
+  }
+  &__user-profile {
+    max-height: 70rem;
+    &--img {
+      height: 100%;
+      max-width: 50rem;
+      width: 100%;
+
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__header-navbar-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border: 2px solid $-color-gold;
+    margin-bottom: 1rem;
+  }
+  &__navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__nav-content {
+    padding: 2rem;
+    background-color: rgba($-color-chocolate, 0.6);
+    color: $-color-gray-dark-5;
+    box-shadow: inset 2px 2px 2px 5px rgba(0, 0, 0, 0.6);
+
+    &--2 {
+      background-color: rgba($-color-secondary-dark, 0.6);
+    }
+    &--3 {
+      background-color: rgba($-color-gold, 0.6);
+    }
+    &--4 {
+      background-color: rgba($-color-white, 0.6);
+    }
+
+    &--6 {
+      background-color: rgba($-color-gray-dark-7, 0.6);
+    }
+  }
+
+  &__nav-card {
+    display: flex;
+    padding: 1rem 1.5rem;
+    background-color: rgba(#fff, 0.6);
+    align-items: center;
+    gap: 5px;
+
+    box-shadow: 1px 2px 1px 5px rgba(0, 0, 0, 0.2);
+    // & p {
+    // }
+  }
+
+  &__nav-icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &__feature {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__feature-card {
+    flex: 1;
+    margin: 0 5px;
+    background-color: $-color-white;
+    border: 1px solid #fff;
+
+    &--1 {
+      background-image: url(../img/panter.jpg);
+      background-position: center;
+      background-size: cover;
+
+      padding: 3rem;
+    }
+    // &--2 {
+    //   // background-image: url(../img/burchart-1.jpg);
+    //   // background-position: center;
+    //   // background-size: cover;
+    // }
+  }
+
+  &-content {
+    &--3 {
+      margin-top: 2rem;
+    }
+  }
+  // &__personal {
+  // }
+
+  &__personal-navbar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+
+    gap: 6px;
+  }
+
+  &__personal-card {
+    padding: 2rem;
+    background-color: $-color-gray-dark-5;
+    border: 1px solid $-color-white;
+  }
+
+  // &__tracker {
+  // }
+
+  // &__tracker-content {
+  // }
+
+  // &__data-content {
+  // }
+}

@@ -1,0 +1,47 @@
+////////////////////////////////////////////////////
+/// SHOP UI FOOTER
+
+.footer {
+  // background-color: #987;
+  background-color: $-color-gray-light-1;
+  grid-column: full-start / full-end;
+
+  line-height: 20px;
+  padding: 20px;
+  //   color: $-primary-clr;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  &__item {
+    box-shadow: 1px 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 2px 2px 5px $-color-primary;
+    background-color: $-color-primary;
+    padding: 1rem;
+    background-color: $-color-gray-dark-1;
+    border-radius: 16px;
+    & p {
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    text-decoration: none;
+    color: $-color-gray-light-3;
+    // color: #fff;
+  }
+
+  &__icon {
+    height: 4rem;
+    width: 4rem;
+    fill: $-color-txt;
+  }
+}

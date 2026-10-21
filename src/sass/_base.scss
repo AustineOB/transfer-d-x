@@ -1,0 +1,152 @@
+@import "mixins";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+/////////////////////////////////////////////////////////
+/// EXTRA COLORS
+$-color-lilas: #c8a2c8;
+// $-color-secon: #3e1121;
+$-color-purple: #45006e;
+$-color-tylon: #66023c;
+$-color-green: #05b355;
+$-color-green-light: #10d36b;
+$-color-green-dark: #004920;
+$-color-blue: #063f47;
+$-color-blue-light: #1864;
+$-color-blue-primary: #0bc4ad;
+$-color-blue-primary-light: #0dfad6;
+$-color-border: #768796;
+
+///////////
+/// FOR DASHBOARDS
+$-color-blue-tech-blue: #2776ea;
+$-color-blue-tech-silver: #b3b5b9;
+$-color-blue-tech-black: #0d0e0e;
+$-color-blue-tech-super-blue: #0950cd;
+
+$-color-tech-navy: #0a1a2f;
+$-color-tech-slate: #102a43;
+$-color-tech-elctric: #2ec4ff;
+$-color-tech-steel-gray: #9fb3c8;
+
+/* 
+To be Taking out later for next prjt
+#f8f9fa // for light gray backgrond
+#bdc3c7 // for lighter dime lighter text 
+#2c3e50 // For darker text or highlighted text
+#7f8c8d;// for balanced text or light text in the gray background of "#f8f9fa"
+
+*/
+/////////////////////////////////////////////////////////
+/// SECONDARY COLORS
+$-color-secondary: #800020;
+// $-color-secondary-dark: #544647;//dark brown
+$-color-secondary-dark: #3e000c;
+$-color-secondary-light: #ad3754;
+
+$-color-secondary-darker: #2f0410;
+$-color-secondary-darken: #1c010c;
+$-secondary-opa: rgba(128, 0, 32, 0.4); //rgba(#800020, 0.4)
+
+// $-color-secondary: #722f37; //wine
+$-color-beige: #d8cfc4;
+$-color-biege: #d8cfc4;
+$-color-chocolate: #ffecd1;
+$-color-gold: #c9a227;
+
+/////////////////////////////////////////////////////////
+/// PRIMARY COLORS
+$-color-primary-dark: #5e4877;
+$-color-primary-lighter: #c3b1e1; //#c3b1e1;
+$-color-primary-light: #ad79e2;
+$-color-primary: #9e8cc2;
+$-color-primary-opacity: #d9d1f5;
+$-color-primary-white: #e6e6fa; //  for nav transparent// #f0e7f2; //lighten 6%
+
+$-color-primary-x-opacity: #b288e7;
+$-color-primary-x-darker: #ad79e2;
+
+/////////////////////////////////////////////////////////
+/// LIGHT GRAY COLORS
+$-color-milk-white: #faf7f8;
+$-color-white: #ffffff;
+$-color-gray-light-1: #faf9f9;
+$-color-gray-light-2: #f4f2f2;
+$-color-gray-light: #f5f5f5;
+$-color-gray-light-3: #f0eeee;
+$-color-gray-light-4: #ccc;
+
+/////////////////////////////////////////////////////////
+/// DARK GRAY COLORS
+$-color-gray-dark-1: #999;
+$-color-gray-dark-2: #777;
+$-color-gray-dark-3: #333;
+$-color-gray-dark-4: #2b2b2b;
+$-color-gray-dark-5: #121212;
+$-color-gray-dark-6: #1a1a1a;
+$-color-gray-dark-7: #080807;
+
+/////////////////////////////////////////////////////////
+/// TEXT COLORS
+$-color-txt: #666666;
+$-color-txt-sec: #704b54;
+$-color-txt-pri: #4e4459;
+$-color-txt-light: #708090;
+$-color-txt-dark: #2c3e50;
+$-color-txt-lighten: #c4c3d0;
+
+///////////////////////////////////////////////////////
+///FONT FAMILY
+$-font-primary: "Redressed", cursive;
+$-font-display: "Josefin Sans", sans-serif;
+$-border-btn-in: inset 1px 1px 2px 5px rgba(0, 0, 0, 0.2);
+$-border-btn-out: 1px 1px 2px 5px rgba(0, 0, 0, 0.2);
+
+$-line: 1px solid $-color-gray-light-4;
+
+//  NEW
+$-line-1: 1px solid $-color-gray-light-4;
+$-shadow-1: 0 5px 10px rgba(0, 0, 0, 0.6);
+
+$-font-primary: "Josefin Sans", sans-serif;
+$-font-secondary: "Redressed", cursive;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 9px
+  }
+  @include respond(phone-land) {
+    font-size: 50%; // 8px
+  }
+}
+
+.container-large {
+  background-color: $-color-white;
+  margin: 10rem auto;
+  max-width: 120rem;
+  width: 100%;
+  min-height: 50rem;
+  display: grid;
+
+  grid-template-rows: max-content repeat(4, minmax(min-content, 5rem));
+
+  grid-template-columns:
+    [full-start] minmax(3rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 10rem) [col-end]
+    )
+    [center-end] minmax(3rem, 1fr) [full-end];
+
+  @include respond(tab-land) {
+    margin: 0;
+  }
+}

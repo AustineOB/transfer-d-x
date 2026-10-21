@@ -1,0 +1,76 @@
+///////////////////////////////////
+/// SELLS DASHBOARD
+.sells-dashboard {
+  color: $-color-white;
+  background-color: $-color-blue-tech-silver;
+  &__content--1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  &__navbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    &--card {
+      background-color: $-color-tech-navy;
+      padding: 1rem 5rem;
+      border-radius: 8px;
+
+      & span {
+        font-size: 2rem;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  &__sells-title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &__col-wrapper {
+    &--1 {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  &__top-category-canvas {
+    width: 100%;
+    background-color: orange;
+  }
+}
+
+//////////////////////////////////////////////
+/// CHART"S
+#daily-sells-chart {
+  width: 100%;
+  height: 100%;
+  background-color: $-color-secondary-darker;
+}
+
+#deviation-chart {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+#category-chart {
+  height: 100%;
+  width: 100%;
+}
+// /////////////////////////////////
+//// LEARNING
+#lerning-canvas {
+  background-color: #ffffff;
+}
+
+.learning-canvas {
+  width: 100%;
+}
